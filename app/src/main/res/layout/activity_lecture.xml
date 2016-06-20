@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/tittle_left" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/name"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        style="@style/myCustomEditText"
+        android:layout_below="@+id/app_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:id="@+id/teacher"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/colorText"
+        style="@style/myCustomEditText"
+        android:entries="@array/type"
+        android:layout_below="@+id/name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/student"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="@style/myCustomEditText"
+        android:textColor="@color/colorText"
+        android:entries="@array/type"
+        android:layout_below="@+id/teacher"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/subject"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="@style/myCustomEditText"
+        android:textColor="@color/colorText"
+        android:entries="@array/type"
+        android:layout_below="@+id/student"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="@style/myCustomEditText"
+        android:hint="@string/topic"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:id="@+id/topic"
+        android:layout_below="@+id/subject"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/data"
+        style="@style/myButton"
+        android:textColor="@color/colorText"
+        android:text="@string/date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/topic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/commentTeacher"
+        style="@style/myButton"
+        android:text="@string/parol"
+        android:textColor="@color/colorText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/data"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/comTeacher"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        style="@style/myCustomEditText"
+        android:hint="@string/commentTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/commentTeacher"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/comStudent"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        style="@style/myCustomEditText"
+        android:hint="@string/commentStudent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/comTeacher"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/myCustomButton"
+        android:textColor="@color/colorText"
+        android:text="@string/save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

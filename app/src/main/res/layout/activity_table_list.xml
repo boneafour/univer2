@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name"
+        android:text="Не заполнено "
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge">
+    </TextView>
+
+    <TextView
+        android:text="Не заполнено "
+        android:id="@+id/teacherName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </TextView>
+
+    <TextView
+        android:text="Не заполнено "
+        android:id="@+id/studentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/teacherName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </TextView>
+
+    <TextView
+        android:text="Не заполнено "
+        android:id="@+id/commentTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/lectureTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Не заполнено "
+        android:id="@+id/subjectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/studentName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:text="Не заполнено "
+        android:id="@+id/topicName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/subjectName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:text="Не заполнено "
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/topicName"
+        android:layout_alignRight="@+id/commentTeacher"
+        android:layout_alignEnd="@+id/commentTeacher" />
+    <TextView
+        android:text="Не заполнено "
+        android:id="@+id/lectureTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/date"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Не заполнено "
+        android:id="@+id/commentStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/commentTeacher"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Проверено"
+        android:id="@+id/check"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_below="@+id/commentStudent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+</RelativeLayout>

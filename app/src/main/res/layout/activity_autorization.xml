@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <EditText
+        style="@style/myCustomEditText"
+        android:hint="@string/parol"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:id="@+id/parol"
+        android:layout_above="@+id/loginButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="@style/myCustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/loginB"
+        android:id="@+id/loginButton"
+        android:focusable="false"
+        android:layout_alignParentBottom="true"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="@style/myCustomEditText"
+        android:id="@+id/type"
+        android:entries="@array/type"
+        android:layout_above="@+id/parol"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

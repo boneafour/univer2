@@ -22,6 +22,7 @@ public class Autorization extends AppCompatActivity implements View.OnClickListe
     EditText etParol;
     Button btnLogin;
     Spinner spType;
+    String stType, stParol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,28 +44,23 @@ public class Autorization extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.loginButton:
-
-                Intent intent=new Intent(this, MainActivity.class);
-                startActivity(intent);
-                /*
-                loginS = Login.getText().toString();
-                parolS = Parol.getText().toString();
-                type=typeS.getSelectedItem().toString();
-                if(type.equals(a) && loginS.equals("admin") && parolS.equals("12345")){
-                    Intent intent=new Intent(this, MainActivity.class);
-                    startActivity(intent);
+                stParol = etParol.getText().toString();
+                stType=spType.getSelectedItem().toString();
+                if(stType.equals("Преподаватель")  && stParol.equals("12345")){
+                    Intent intent1 =new Intent(this, MainActivity.class);
+                    startActivity(intent1);
                 }
-               else if(type.equals(b)){
-                    Intent intent=new Intent(this, MainActivity1.class);
-                    startActivity(intent);
+               else if(stType.equals("Студент")){
+                    Intent intent2 =new Intent(this, MainActivity1.class);
+                    startActivity(intent2);
                 }
-                else if(type.equals(a) && (loginS.equals("") || parolS.equals(""))){
-                    Toast.makeText(Autorization.this, "Напишите логин и пароль!", Toast.LENGTH_SHORT).show();
+                else if(stType.equals("Преподаватель") && ( stParol.equals(""))){
+                    Toast.makeText(Autorization.this, "Напишите пароль!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(Autorization.this, "Логин или пароль неверный!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Autorization.this, "Пароль неверный!", Toast.LENGTH_SHORT).show();
                 }
-*/
+
                 break;
         }
     }

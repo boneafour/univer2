@@ -37,7 +37,7 @@ public class Student extends Activity implements View.OnClickListener {
         btnSave = (Button) findViewById(R.id.btnSave);
         btnSave.setOnClickListener(this);
 
-        etFullName = (EditText) findViewById(R.id.name);
+        etFullName = (EditText) findViewById(R.id.studentName);
         etPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
         etCommentStudent = (EditText) findViewById(R.id.comStudent);
 

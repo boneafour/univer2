@@ -3,13 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorBtn">#212121</color>
-    <color name="colorPressedBtn">#000000</color>
-    <color name="colorBackground">#212121</color>
+    <color name="colorBtn">#3AAACF</color>
+    <color name="colorPressedBtn">#3AAACF</color>
+    <color name="colorBackground">#3AAACF</color>
     <color name="colorEditText">#000000</color>
-    <color name="colorText">#b07550</color>
-
-
-
-
+    <color name="colorText">#212121</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="grey">#212121</color>
+    <color name="green">#3AAACF</color>
+    <color name="darkgreen">#212121</color>
 </resources>

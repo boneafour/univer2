@@ -14,8 +14,6 @@
         android:id="@+id/discName"
         style="@style/myCustomEditText"
         android:hint="@string/enter"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:layout_marginTop="9dp"
         android:layout_below="@+id/app_bar"
         android:layout_alignParentLeft="true"

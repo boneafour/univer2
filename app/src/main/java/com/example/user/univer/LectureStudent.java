@@ -23,7 +23,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lecture extends Activity implements View.OnClickListener{
+public class LectureStudent extends Activity implements View.OnClickListener{
 
     private static final int DIALOG_ID = 1;
     int DIALOG_TIME = 2;
@@ -86,7 +86,7 @@ public class Lecture extends Activity implements View.OnClickListener{
         etTopic = (EditText) findViewById(R.id.topic);
         etCommentTeacher = (EditText) findViewById(R.id.comTeacher);
         etCommentStudent = (EditText) findViewById(R.id.comStudent);
-        etCommentStudent.setEnabled(false);
+        etCommentTeacher.setEnabled(false);
 
         btnData = (Button) findViewById(R.id.data);
         btnData.setOnClickListener(this);
@@ -116,7 +116,7 @@ public class Lecture extends Activity implements View.OnClickListener{
                 showDialog(DIALOG_TIME);
                 break;
             case R.id.btnSave:
-                Toast.makeText(Lecture.this, "Сохранено", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LectureStudent.this, "Сохранено", Toast.LENGTH_SHORT).show();
                 stName = "" + etName.getText();
                 stTeacher = "" + spTeacher.getSelectedItem().toString();
                 stStudent = "" + spStudent.getSelectedItem().toString();
@@ -174,7 +174,7 @@ public class Lecture extends Activity implements View.OnClickListener{
             finish();
         }
         catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(Lecture.this, "Отправлено", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LectureStudent.this, "Отправлено", Toast.LENGTH_SHORT).show();
         }
     }
 

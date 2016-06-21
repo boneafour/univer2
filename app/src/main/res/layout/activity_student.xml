@@ -11,10 +11,8 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         style="@style/myCustomEditText"
-        android:id="@+id/name"
+        android:id="@+id/studentName"
         android:hint="@string/fullName"
         android:layout_below="@+id/app_bar"
         android:layout_alignParentLeft="true"
@@ -25,8 +23,6 @@
 
     <EditText
         android:id="@+id/comStudent"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         style="@style/myCustomEditText"
         android:hint="@string/comment"
         android:layout_width="match_parent"
@@ -37,8 +33,6 @@
 
     <Button
         style="@style/myCustomButton"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:id="@+id/btnSave"
         android:text="@string/save"
         android:layout_width="match_parent"
@@ -53,13 +47,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="@string/phoneNumber"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         style="@style/myCustomEditText"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/phoneNumber"
-        android:layout_below="@+id/name"
+        android:layout_below="@+id/studentName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

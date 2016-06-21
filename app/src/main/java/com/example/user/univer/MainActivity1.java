@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity1 extends Activity {
 
     private TextView txtTitle;
 
@@ -26,34 +26,34 @@ public class MainActivity extends Activity {
                                     int position, long id) {
 
               if(position==0){
-                    startActivity(new Intent(MainActivity.this, Lecture.class));
+                    startActivity(new Intent(MainActivity1.this, LectureStudent.class));
                     }
                 else if (position==1){
-                    startActivity(new Intent(MainActivity.this, Report.class));
+                    startActivity(new Intent(MainActivity1.this, ReportStudent.class));
                 }
                 else if(position==2){
-                    startActivity(new Intent(MainActivity.this, Calendar.class));
+                    startActivity(new Intent(MainActivity1.this, Calendar.class));
                 }
                 else if(position==3){
-                    startActivity(new Intent(MainActivity.this, MarkForTeacher.class));
+                    startActivity(new Intent(MainActivity1.this, MarkForStudent.class));
                 }
                 else if(position==4){
-                    startActivity(new Intent(MainActivity.this, Teacher.class));
+                //    startActivity(new Intent(MainActivity1.this, Teacher.class));
                 }
                 else if (position==5){
-                //    startActivity(new Intent(MainActivity.this, Student.class));
+                    startActivity(new Intent(MainActivity1.this, Student.class));
                 }
                 else if(position==6){
-                    startActivity(new Intent(MainActivity.this, Subject.class));
+                //    startActivity(new Intent(MainActivity1.this, Subject.class));
                 }
                 else if(position==7){
-                    startActivity(new Intent(MainActivity.this, News.class));
+                    startActivity(new Intent(MainActivity1.this, News.class));
                 }
                 else if(position==8){
-                    startActivity(new Intent(MainActivity.this, GalleryActivity.class));
+                    startActivity(new Intent(MainActivity1.this, GalleryActivity.class));
                 }
                 else if(position==9){
-                    startActivity(new Intent(MainActivity.this, AboutUs.class));
+                    startActivity(new Intent(MainActivity1.this, AboutUs.class));
                 }
               }
 

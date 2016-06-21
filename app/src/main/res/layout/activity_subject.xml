@@ -9,12 +9,10 @@
 
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/studentName"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:hint="@string/name"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         style="@style/myCustomEditText"
         android:layout_below="@+id/app_bar"
         android:layout_alignParentLeft="true"
@@ -25,20 +23,16 @@
 
     <EditText
         android:id="@+id/comSubject"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         style="@style/myCustomEditText"
         android:hint="@string/comment"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/name"
+        android:layout_below="@+id/studentName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/btnSave"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         style="@style/myCustomButton"
         android:text="@string/save"
         android:layout_width="match_parent"

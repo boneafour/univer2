@@ -6,10 +6,8 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/studentName"
         android:text="Не заполнено "
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:textAppearance="?android:attr/textAppearanceLarge">
@@ -20,20 +18,16 @@
         android:id="@+id/teacherName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
-        android:layout_below="@+id/name"
+        android:layout_below="@+id/studentName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
     </TextView>
 
     <TextView
         android:text="Не заполнено "
-        android:id="@+id/studentName"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:layout_below="@+id/teacherName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -44,8 +38,6 @@
         android:id="@+id/commentTeacher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:layout_below="@+id/lectureTime"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -55,9 +47,7 @@
         android:id="@+id/subjectName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
-        android:layout_below="@+id/studentName"
+        android:layout_below="@+id/name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
     <TextView
@@ -65,8 +55,6 @@
         android:id="@+id/topicName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:layout_below="@+id/subjectName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -75,8 +63,6 @@
         android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:layout_below="@+id/topicName"
         android:layout_alignRight="@+id/commentTeacher"
         android:layout_alignEnd="@+id/commentTeacher" />
@@ -85,19 +71,15 @@
         android:id="@+id/lectureTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:layout_below="@+id/date"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Не заполнено "
-        android:id="@+id/commentStudent"
+        android:id="@+id/mark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
         android:layout_below="@+id/commentTeacher"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -107,9 +89,7 @@
         android:layout_height="wrap_content"
         android:text="Проверено"
         android:id="@+id/check"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorText"
-        android:layout_below="@+id/commentStudent"
+        android:layout_below="@+id/mark"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:checked="false" />

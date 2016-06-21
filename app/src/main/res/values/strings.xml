@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Univer</string>
+    <string name="app_name">МУИТ</string>
+    <string name="main">Дистанционное обучение МУИТ</string>
     <string-array name="type">
         <item>преподаватель</item>
         <item>студент</item>
@@ -7,7 +8,9 @@
     <string name="parol">Пароль</string>
     <string name="loginB">Войти</string>
     <string name="autorization">Авторизация</string>
-    <string name="subject">Предмет</string>
+    <string name="gallery">Галерея</string>
+    <string name="subject">Предметы</string>
+    <string name="calendar">Календарь</string>
     <string name="teacher">Преподаватель</string>
     <string name="student">Студент</string>
     <string name="save">Сохранить</string>

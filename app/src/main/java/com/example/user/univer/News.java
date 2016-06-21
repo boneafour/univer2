@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by user on 14.06.2016.
  */
-public class Subject extends Activity implements View.OnClickListener{
+public class News extends Activity implements View.OnClickListener{
 
     private TextView txtTitle;
     private ImageButton btnBack;

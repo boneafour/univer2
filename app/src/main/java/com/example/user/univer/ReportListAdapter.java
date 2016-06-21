@@ -75,15 +75,15 @@ public class ReportListAdapter extends BaseAdapter implements View.OnClickListen
         {
             convertView = inflater.inflate(R.layout.activity_table_list, null);
             holder = new ViewHolder();
-            holder.tvName = (TextView) convertView.findViewById(R.id.name);
+            holder.tvName = (TextView) convertView.findViewById(R.id.studentName);
             holder.tvTeacher = (TextView) convertView.findViewById(R.id.teacherName);
-            holder.tvStudent = (TextView) convertView.findViewById(R.id.studentName);
+            holder.tvStudent = (TextView) convertView.findViewById(R.id.name);
             holder.tvSubject = (TextView) convertView.findViewById(R.id.subjectName);
             holder.tvTopic = (TextView) convertView.findViewById(R.id.topicName);
             holder.tvDate = (TextView) convertView.findViewById(R.id.date);
             holder.tvTime = (TextView) convertView.findViewById(R.id.lectureTime);
             holder.tvCommentTeacher = (TextView) convertView.findViewById(R.id.commentTeacher);
-            holder.tvCommentStudent = (TextView) convertView.findViewById(R.id.commentStudent);
+            holder.tvCommentStudent = (TextView) convertView.findViewById(R.id.mark);
             holder.cbCheck = (CheckBox) convertView.findViewById(R.id.check);
             convertView.setTag(holder);
         }

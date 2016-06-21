@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
-    private String[] main = { "Лекция","Отчет","Предподаватель","Студент", "Предмет" };
+    private String[] main = { "Лекция","Отчет","Календарь","Оценки", "Предподаватель", "Студент","Предметы","Новости","Галерея", "О нас" };
     public ImageAdapter(Context c) {
         mContext = c;
     }
@@ -27,12 +27,10 @@ public class ImageAdapter extends BaseAdapter {
         return 0;
     }
 
-    // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
         View grid;
         if (convertView == null) {
-            // if it's not recycled, initialize some attributes
             grid = new View(mContext);
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
             grid = inflater.inflate(R.layout.cellgrid, parent, false);
@@ -50,9 +48,8 @@ public class ImageAdapter extends BaseAdapter {
         return grid;
 
     }
-    // references to our images
     private Integer[] mThumbIds = {
-            R.drawable.lecture, R.drawable.otchet, R.drawable.teacher2, R.drawable.student2, R.drawable.subject1,
+            R.drawable.lecture, R.drawable.otchet, R.drawable.lecture, R.drawable.lecture, R.drawable.teacher2, R.drawable.student2, R.drawable.subject1, R.drawable.lecture, R.drawable.lecture,  R.drawable.lecture,
 
     };
 }

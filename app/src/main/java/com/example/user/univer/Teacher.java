@@ -39,6 +39,7 @@ public class Teacher extends Activity implements View.OnClickListener {
 
         List<SubjectData> subject = db.getAllSubjects();
         ArrayList<String> roleList = new ArrayList<String>();
+        roleList.add("Выберите преподавателя:");
         for(SubjectData cn : subject){
             String s = cn.getSubjectName();
             roleList.add(s);

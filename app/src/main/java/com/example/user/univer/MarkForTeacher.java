@@ -32,7 +32,7 @@ public class MarkForTeacher extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_mark_for_teacher);
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
-        txtTitle.setText(getString(R.string.subject));
+        txtTitle.setText("Оценки");
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);

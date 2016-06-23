@@ -20,7 +20,7 @@ import java.util.List;
 public class Report extends Activity implements View.OnClickListener {
 
     private TextView txtTitle;
-    private ImageButton btnBack, btnSearch;
+    private ImageButton btnBack;
     ListView lv;
     ReportListAdapter lvAdapter;
     DatabaseHandler db = new DatabaseHandler(this);
@@ -36,8 +36,7 @@ public class Report extends Activity implements View.OnClickListener {
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);
-        btnSearch = (ImageButton) findViewById(R.id.btnSearch);
-        btnSearch.setOnClickListener(this);
+
 
         arName = new ArrayList<String>();
         arTeacher = new ArrayList<String>();
@@ -93,9 +92,7 @@ public class Report extends Activity implements View.OnClickListener {
             case R.id.btnBack:
                 NavUtils.navigateUpFromSameTask(this);
                 break;
-            case R.id.btnSearch:
-                startActivity(new Intent(Report.this, Search.class));
-                break;
+
         }
     }
 }

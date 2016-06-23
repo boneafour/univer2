@@ -45,6 +45,7 @@ public class Autorization extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.loginButton:
                 stParol = etParol.getText().toString();
+                etParol.setText("");
                 stType=spType.getSelectedItem().toString();
                 if(stType.equals("Преподаватель")  && stParol.equals("12345")){
                     Intent intent1 =new Intent(this, MainActivity.class);

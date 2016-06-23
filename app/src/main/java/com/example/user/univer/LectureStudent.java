@@ -188,8 +188,8 @@ public class LectureStudent extends Activity implements View.OnClickListener{
             return new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                    btnData.setText(dayOfMonth + " " + getResources().getStringArray(R.array.months)[monthOfYear] + " " +
-                            year + " " + getString(R.string.year));
+                    btnData.setText(year + "-" + getResources().getStringArray(R.array.months)[monthOfYear] + "-" +
+                            dayOfMonth );
                 }
             }, 2016, 6, 22);
         }

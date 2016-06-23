@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">МУИТ</string>
-    <string name="main">Дистанционное обучение МУИТ</string>
+    <string name="main">МУИТ</string>
     <string-array name="type">
         <item>преподаватель</item>
         <item>студент</item>
@@ -26,7 +26,7 @@
     <string name="enter">Введите...</string>
     <string name="report">Отчет</string>
     <string name="topic">Тема:</string>
-    <string name="commentTeacher">Комментарии для преподавателя:</string>
+    <string name="commentTeacher">Комментарии для преподавателей:</string>
     <string name="commentStudent">Комментарии для студента:</string>
     <string name="alert_dialog_title">Выберите критерии</string>
     <string-array name="languages">
@@ -40,19 +40,18 @@
 
 
     <string name="date">Дата</string>
-    <string name="year">г.</string>
     <string-array name="months">
-        <item>Января</item>
-        <item>Февраля</item>
-        <item>Марта</item>
-        <item>Апреля</item>
-        <item>Мая</item>
-        <item>Июня</item>
-        <item>Июля</item>
-        <item>Августа</item>
-        <item>Сентября</item>
-        <item>Октября</item>
-        <item>Ноября</item>
-        <item>Декабря</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
     </string-array>
 </resources>

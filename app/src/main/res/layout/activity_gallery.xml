@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="{relativePackage}.${activityClass}"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:weightSum="1">
     <include
         android:id="@+id/app_bar"
         layout="@layout/tittle_left" />
@@ -16,13 +17,25 @@
 
     <ImageView
         android:id="@+id/image1"
-        android:layout_width="215dp"
-        android:layout_height="315dp"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
         android:layout_gravity="center_horizontal"
-        android:background="#cfcfcf"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:src="@drawable/back" />
+        android:src="@drawable/pic1"
+        android:layout_weight="0.02"
+        android:layout_margin="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Международный IT Университет"
+        android:id="@+id/name"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp" />
+
 </LinearLayout>

@@ -32,7 +32,7 @@ public class MainActivity1 extends Activity {
                     startActivity(new Intent(MainActivity1.this, ReportStudent.class));
                 }
                 else if(position==2){
-                    startActivity(new Intent(MainActivity1.this, Calendar.class));
+                    startActivity(new Intent(MainActivity1.this, CalendarStudent.class));
                 }
                 else if(position==3){
                     startActivity(new Intent(MainActivity1.this, MarkForStudent.class));
@@ -47,13 +47,13 @@ public class MainActivity1 extends Activity {
                 //    startActivity(new Intent(MainActivity1.this, Subject.class));
                 }
                 else if(position==7){
-                    startActivity(new Intent(MainActivity1.this, News.class));
+                    startActivity(new Intent(MainActivity1.this, NewsStudent.class));
                 }
                 else if(position==8){
-                    startActivity(new Intent(MainActivity1.this, GalleryActivity.class));
+                    startActivity(new Intent(MainActivity1.this, GalleryActivityStudent.class));
                 }
                 else if(position==9){
-                    startActivity(new Intent(MainActivity1.this, AboutUs.class));
+                    startActivity(new Intent(MainActivity1.this, AboutUsStudent.class));
                 }
               }
 

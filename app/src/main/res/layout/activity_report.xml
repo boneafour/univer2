@@ -5,7 +5,7 @@
 
     <include
         android:id="@+id/app_bar"
-        layout="@layout/tittle_left_and_right_search" />
+        layout="@layout/tittle_left" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"

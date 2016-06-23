@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by user on 14.06.2016.
  */
-public class Calendar extends Activity implements View.OnClickListener{
+public class CalendarStudent extends Activity implements View.OnClickListener{
 
     private TextView txtTitle;
     private ImageButton btnBack;
@@ -57,7 +57,7 @@ public class Calendar extends Activity implements View.OnClickListener{
         btn_calender.setOnClickListener(this);
 
         lv_android = (ListView) findViewById(R.id.lv_android);
-        list_adapter=new AndroidListAdapter(Calendar.this, R.layout.list_item, CalendarCollection.date_collection_arr);
+        list_adapter=new AndroidListAdapter(CalendarStudent.this, R.layout.list_item, CalendarCollection.date_collection_arr);
         lv_android.setAdapter(list_adapter);
 
     }
@@ -72,7 +72,7 @@ public class Calendar extends Activity implements View.OnClickListener{
             break;
 
             case R.id.btn_calender:
-                startActivity(new Intent(Calendar.this, CalenderActivity.class));
+                startActivity(new Intent(CalendarStudent.this, CalenderActivity.class));
 
                 break;
     }

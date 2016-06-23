@@ -37,7 +37,7 @@ public class AddMark extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_add_mark);
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
-        txtTitle.setText(getString(R.string.teacher));
+        txtTitle.setText("Оценки");
 
         List<TeacherData> teachers = db.getAllTeachers();
         ArrayList<String> teacherList = new ArrayList<String>();

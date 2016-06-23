@@ -3,21 +3,15 @@ package com.example.user.univer;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.List;
-
 /**
  * Created by user on 14.06.2016.
  */
-public class News extends Activity implements View.OnClickListener{
+public class NewsStudent extends Activity implements View.OnClickListener{
 
     private TextView txtTitle;
     private ImageButton btnBack;

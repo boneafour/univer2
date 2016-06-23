@@ -16,18 +16,20 @@ import android.widget.Gallery;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
 /**
  * Created by user on 14.06.2016.
  */
-public class GalleryActivity extends Activity implements View.OnClickListener{
+public class GalleryActivityStudent extends Activity implements View.OnClickListener{
 
     private TextView txtTitle;
     private ImageButton btnBack;
     private Button btnSave;
+
+    EditText etName,  etCommentSubject;
+    String stFullName, stCommentSubject;
 
     TextView name;
     Integer[] imageIDs = {
@@ -49,17 +51,17 @@ public class GalleryActivity extends Activity implements View.OnClickListener{
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setText(getString(R.string.gallery));
+
         name = (TextView) findViewById(R.id.name);
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);
 
 
-        android.widget.Gallery gallery = (android.widget.Gallery) findViewById(R.id.gallery1);
+        Gallery gallery = (Gallery) findViewById(R.id.gallery1);
         gallery.setAdapter(new ImageAdapter(this));
         gallery.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position,long id)
             {
-
                 if(position==0){
                     name.setText("Международный IT Университет");
                 }
@@ -87,7 +89,6 @@ public class GalleryActivity extends Activity implements View.OnClickListener{
                 else if(position==8){
                     name.setText("Ярмарка вакансий");
                 }
-
                 // display the images selected
                 ImageView imageView = (ImageView) findViewById(R.id.image1);
                 imageView.setImageResource(imageIDs[position]);
@@ -104,6 +105,22 @@ public class GalleryActivity extends Activity implements View.OnClickListener{
                 NavUtils.navigateUpFromSameTask(this);
             break;
 
+            case R.id.btnSave:
+                stFullName = "" + etName.getText();
+                etName.setText("");
+                stCommentSubject = "" + etCommentSubject.getText();
+                etCommentSubject.setText("");
+                System.out.println(stFullName);
+                System.out.println(stCommentSubject);
+
+            DatabaseHandler db = new DatabaseHandler(this);
+            db.addSubject(new SubjectData(stFullName, stCommentSubject));
+            List<SubjectData> subjects = db.getAllSubjects();
+            for (SubjectData cn : subjects) {
+                String log = "Id: " + cn.getSubjectID() + " ,Names: " + cn.getSubjectName() + " ,Comment: " + cn.getSubjectComment();
+                Log.d("Name: ", log);
+            }
+            break;
     }
 
     }

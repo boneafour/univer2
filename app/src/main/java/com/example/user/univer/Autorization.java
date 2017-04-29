@@ -32,7 +32,7 @@ public class Autorization extends AppCompatActivity implements View.OnClickListe
         spType = (Spinner) findViewById(R.id.type);
         List<String> list = new ArrayList<String>();
         list.add("Преподаватель");
-        list.add("Студент");
+        list.add("Школьник");
         ArrayAdapter<String> dataAdapter= new ArrayAdapter<String>(this, R.layout.activity_spinner, list);
         spType.setAdapter(dataAdapter);
         etParol = (EditText) findViewById(R.id.parol);
@@ -51,7 +51,7 @@ public class Autorization extends AppCompatActivity implements View.OnClickListe
                     Intent intent1 =new Intent(this, MainActivity.class);
                     startActivity(intent1);
                 }
-               else if(stType.equals("Студент")){
+               else if(stType.equals("Школьник")){
                     Intent intent2 =new Intent(this, MainActivity1.class);
                     startActivity(intent2);
                 }

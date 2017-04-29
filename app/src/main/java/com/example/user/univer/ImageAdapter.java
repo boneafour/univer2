@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
-    private String[] main = { "Лекция","Отчет","Заметки","Оценки", "Предподаватель", "Студент","Предметы","Новости","Галерея", "О нас" };
+    private String[] main = { "Лекция","Отчет","Заметки","Оценки", "Предподаватель", "Школьник","Предметы","Новости","Галерея", "О нас" };
     public ImageAdapter(Context c) {
         mContext = c;
     }

@@ -32,10 +32,10 @@ public class Lecture extends Activity implements View.OnClickListener{
     DatabaseHandler db = new DatabaseHandler(this);
     private TextView txtTitle;
     private ImageButton btnBack;
-    EditText etName, etTopic, etCommentTeacher, etCommentStudent;
+    EditText etName, etTopic, etCommentTeacher, etCommentStudent, etLecture;
     Spinner spTeacher, spStudent, spSubject;
     Button  btnData, btnTime, btnSave, btnSend;
-    String stName,stTeacher, stStudent, stSubject, stTopic, stDate, stTime, stCommentStudent, stCommentTeacher, stCheck, stMessege;
+    String stName,stTeacher, stStudent, stSubject, stTopic, stLecture, stDate, stTime, stCommentStudent, stCommentTeacher, stCheck, stMessege;
 
 
 
@@ -83,7 +83,8 @@ public class Lecture extends Activity implements View.OnClickListener{
 
 
         etName = (EditText) findViewById(R.id.studentName);
-        etTopic = (EditText) findViewById(R.id.topic);
+        etTopic = (EditText) findViewById(R.id.editText);
+        etLecture = (EditText) findViewById(R.id.topic);
         etCommentTeacher = (EditText) findViewById(R.id.comTeacher);
         etCommentStudent = (EditText) findViewById(R.id.comStudent);
         etCommentStudent.setEnabled(false);
@@ -127,13 +128,14 @@ public class Lecture extends Activity implements View.OnClickListener{
                 stCommentTeacher = "" + etCommentTeacher.getText();
                 stCommentStudent = "" + etCommentStudent.getText();
                 stCheck = "Проверено";
+                stLecture = "" + etLecture.getText();
 
                 db.addLecture(new LectureData(stName, stTeacher, stStudent, stSubject, stTopic, stDate, stTime, stCommentStudent, stCommentStudent, stCheck));
                 List<LectureData> lectures = db.getAllLecture();
                 for (LectureData cn : lectures) {
                     String log = "Id: "+cn.getLectureID()+" ,Name: " + cn.getLectureName() + " ,Teacher: " + cn.getLectureTeacher()+" ,Student: " + cn.getLectureStudent()
                             +" ,Subject: " + cn.getLectureSubject() +" ,Topic: " + cn.getLectureTopic() + " ,Data: " + cn.getLectureData()+" ,Time: " + cn.getLectureTime()
-                            + " ,CommentTeacher: " + cn.getLectureTeacherComment()+" ,CommentStudent: " + cn.getLectureStudentComment();
+                            + " ,CommentTeacher: " + cn.getLectureTeacherComment()+" ,CommentStudent: " + cn.getLectureStudentComment()+" ,Lecture: " + cn.getLectureLecture();
                     Log.d("Name: ", log);
                 }
                 break;
@@ -146,10 +148,11 @@ public class Lecture extends Activity implements View.OnClickListener{
                 stDate = btnData.getText().toString();
                 stTime = btnTime.getText().toString();
                 stTopic = "" + etTopic.getText();
+                stLecture = "" + etLecture.getText();
                 stCommentTeacher = "" + etCommentTeacher.getText();
                 stCommentStudent = "" + etCommentStudent.getText();
                 stCheck = "Нет";
-                stMessege = ("Название: "+stName+"Преподаватель: "+stTeacher+"Студент: "+stStudent+"Предметы: "+stSubject+" Дата: "+stDate+" Время: "+stTime+" Тема:  "+stTopic+" Комментарий: "+stCommentTeacher+" "+stCommentStudent);
+                stMessege = ("Название: "+stName+"Преподаватель: "+stTeacher+"Студент: "+stStudent+"Предметы: "+stSubject+" Дата: "+stDate+" Время: "+stTime+" Тема:  "+stTopic+" Лекция:  "+stLecture+" Комментарий: "+stCommentTeacher+" "+stCommentStudent);
                 sendEmail();
                 break;
 

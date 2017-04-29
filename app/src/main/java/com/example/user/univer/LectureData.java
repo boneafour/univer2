@@ -13,6 +13,7 @@ public class LectureData {
 	String _teacherComment;
 	String _studentComment;
 	String _check;
+	String _lecture;
 
 	public LectureData(){
 	}
@@ -28,6 +29,7 @@ public class LectureData {
 		this._teacherComment = _teacherComment;
 		this._studentComment = _studentComment;
 		this._check = _check;
+		this._topic = _lecture;
 	}
 
 	public int getLectureID(){
@@ -105,4 +107,10 @@ public class LectureData {
 	}
 
 
+	public String getLectureLecture(){
+		return this._lecture;
+	}
+	public void setLectureLecture(String _lecture){
+		this._lecture = _lecture;
+	}
 }

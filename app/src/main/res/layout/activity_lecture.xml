@@ -63,13 +63,24 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         style="@style/myCustomEditText"
-        android:hint="@string/topic"
+        android:hint="@string/lecture"
         android:id="@+id/topic"
-        android:layout_below="@+id/subject"
+        android:layout_below="@+id/editText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
+
+            <EditText
+                android:id="@+id/editText"
+                style="@style/myCustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/subject"
+                android:hint="@string/topic" />
+
+            <Button
         android:id="@+id/data"
         style="@style/myButton"
         android:text="@string/date"

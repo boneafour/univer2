@@ -52,6 +52,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	private static final String LECTURE_TEACHER_COMMENT= "lecture_teacher_comment";
 	private static final String LECTURE_STUDENT_COMMENT = "lecture_student_comment";
 	private static final String LECTURE_CHECK= "lecture_check";
+	private static final String LECTURE_LECTURE = "lecture_lecture";
 
 	private static final String MARK_ID = "mark_id";
 	private static final String MARK_TEACHER= "mark_teacher";
@@ -86,8 +87,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		String CREATE_TABLE_LECTURES = "CREATE TABLE " + TABLE_LECTURES + "("
 				+ LECTURE_ID + " INTEGER PRIMARY KEY," + LECTURE_NAME + " TEXT,"
 				+ LECTURE_TEACHER +" TEXT,"+ LECTURE_STUDENT + " TEXT,"
-				+ LECTURE_SUBJECT + " TEXT,"+ LECTURE_TOPIC + " TEXT," + LECTURE_DATE +" TEXT,"
-				+ LECTURE_TIME + " TEXT,"+ LECTURE_TEACHER_COMMENT +" TEXT,"+ LECTURE_STUDENT_COMMENT + " TEXT,"+ LECTURE_CHECK+ " TEXT"+  ")";
+				+ LECTURE_SUBJECT + " TEXT,"+ LECTURE_TOPIC + " TEXT,"+ LECTURE_DATE +" TEXT,"
+				+ LECTURE_TIME + " TEXT,"+ LECTURE_TEACHER_COMMENT +" TEXT,"+ LECTURE_STUDENT_COMMENT + " TEXT,"+ LECTURE_CHECK+ " TEXT"+ LECTURE_LECTURE + " TEXT," + ")";
 		db.execSQL(CREATE_TABLE_LECTURES);
 
 		String CREATE_TABLE_MARK = "CREATE TABLE " + TABLE_MARK + "("
@@ -156,6 +157,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		values.put(LECTURE_TEACHER_COMMENT, contact.getLectureTeacherComment());
 		values.put(LECTURE_STUDENT_COMMENT, contact.getLectureStudentComment());
 		values.put(LECTURE_CHECK, contact.getLectureCheck());
+		values.put(LECTURE_LECTURE, contact.getLectureLecture());
 		db.insert(TABLE_LECTURES, null, values);
 		db.close();
 	}
@@ -262,6 +264,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				lecture.setLectureTeacherComment(cursor.getString(8));
 				lecture.setLectureStudentComment(cursor.getString(9));
 				lecture.setLectureCheck(cursor.getString(10));
+				lecture.setLectureLecture(cursor.getString(11));
 				lectureList.add(lecture);
 			} while (cursor.moveToNext());
 		}

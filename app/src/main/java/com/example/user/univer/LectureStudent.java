@@ -10,11 +10,13 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -23,81 +25,77 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LectureStudent extends Activity implements View.OnClickListener{
+public class LectureStudent extends Activity implements View.OnClickListener {
 
-    private static final int DIALOG_ID = 1;
-    int DIALOG_TIME = 2;
-    int myHour = 00;
-    int myMinute = 00;
-    DatabaseHandler db = new DatabaseHandler(this);
-    private TextView txtTitle;
+
     private ImageButton btnBack;
-    EditText etName, etTopic, etCommentTeacher, etCommentStudent;
-    Spinner spTeacher, spStudent, spSubject;
-    Button  btnData, btnTime, btnSave, btnSend;
-    String stName,stTeacher, stStudent, stSubject, stTopic, stDate, stTime, stCommentStudent, stCommentTeacher, stCheck, stMessege;
-
+    DatabaseHandler db = new DatabaseHandler(this);
+    ArrayList<String> arName, arTeacher, arStudent, arSubject, arTopic, arDate, arTime, arCommentStudent, arCommentTeacher, arCheck, arLecture;
+    private TextView txtTitle;
+    ListView lv;
+    ReportListAdapterStudent lvAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lecture);
+        setContentView(R.layout.activity_lecture12);
         db = new DatabaseHandler(this);
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setText(getString(R.string.lecture));
 
-        List<TeacherData> teachers = db.getAllTeachers();
-        ArrayList<String> teacherList = new ArrayList<String>();
-        teacherList.add("Выберите преподавателя:");
-        for(TeacherData cn : teachers){
-            String s = cn.getTeacherName();
-            teacherList.add(s);
-        }
-        spTeacher = (Spinner) findViewById(R.id.teacher);
-        ArrayAdapter studentAdapter = new ArrayAdapter(this,R.layout.activity_spinner, teacherList);
-        spTeacher.setAdapter(studentAdapter);
-
-        List<StudentData> students = db.getAllStudents();
-        ArrayList<String> studentList = new ArrayList<String>();
-        studentList.add("Выберите студента:");
-        for(StudentData cn : students){
-            String s = cn.getStudentName();
-            studentList.add(s);
-        }
-        spStudent = (Spinner) findViewById(R.id.student);
-        ArrayAdapter teacherAdapter = new ArrayAdapter(this,R.layout.activity_spinner, studentList);
-        spStudent.setAdapter(teacherAdapter);
-
-        List<SubjectData> subject = db.getAllSubjects();
-        ArrayList<String> roleList = new ArrayList<String>();
-        roleList.add("Выберите предмета:");
-        for(SubjectData cn : subject){
-            String s = cn.getSubjectName();
-            roleList.add(s);
-        }
-        spSubject = (Spinner) findViewById(R.id.subject);
-        ArrayAdapter subjectList = new ArrayAdapter(this,R.layout.activity_spinner, roleList);
-        spSubject.setAdapter(subjectList);
-
-
-        etName = (EditText) findViewById(R.id.studentName);
-        etTopic = (EditText) findViewById(R.id.topic);
-        etCommentTeacher = (EditText) findViewById(R.id.comTeacher);
-        etCommentStudent = (EditText) findViewById(R.id.comStudent);
-        etCommentTeacher.setEnabled(false);
-
-        btnData = (Button) findViewById(R.id.data);
-        btnData.setOnClickListener(this);
-        btnTime = (Button) findViewById(R.id.commentTeacher);
-        btnTime.setOnClickListener(this);
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);
-        btnSave = (Button) findViewById(R.id.btnSave);
-        btnSave.setOnClickListener(this);
-        btnSend = (Button) findViewById(R.id.send);
-        btnSend.setOnClickListener(this);
+
+        arName = new ArrayList<String>();
+        arTeacher = new ArrayList<String>();
+        arStudent = new ArrayList<String>();
+        arSubject = new ArrayList<String>();
+        arTopic = new ArrayList<String>();
+        arDate = new ArrayList<String>();
+        arTime = new ArrayList<String>();
+        arCommentStudent = new ArrayList<String>();
+        arCommentTeacher = new ArrayList<String>();
+        arCheck = new ArrayList<String>();
+        arLecture = new ArrayList<String>();
+
+        List<LectureData> lecture = db.getAllLecture();
+        for (LectureData cn : lecture) {
+            String stName = cn.getLectureName();
+            arName.add(stName);
+            String stTeacher = cn.getLectureTeacher();
+            arTeacher.add(stTeacher);
+            String stStudent = cn.getLectureStudent();
+            arStudent.add(stStudent);
+            String stSubject = cn.getLectureSubject();
+            arSubject.add(stSubject);
+            String stTopic = cn.getLectureTopic();
+            arTopic.add(stTopic);
+            String stDate = cn.getLectureData();
+            arDate.add(stDate);
+            String stTime = cn.getLectureTime();
+            arTime.add(stTime);
+            String stCommentStudent = cn.getLectureStudentComment();
+            arCommentStudent.add(stCommentStudent);
+            String stCommentTeacher = cn.getLectureTeacherComment();
+            arCommentTeacher.add(stCommentTeacher);
+            String stCheck = cn.getLectureCheck();
+            arCheck.add(stCheck);
+            String stLecture = cn.getLectureLecture();
+            arLecture.add(stLecture);
+
+            lv = (ListView) findViewById(R.id.listView);
+            lvAdapter = new ReportListAdapterStudent(this, arName, arTeacher, arStudent, arSubject, arTopic, arDate, arTime, arCommentStudent, arCommentTeacher, arCheck, arLecture);
+            lv.setAdapter(lvAdapter);
+            lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                    return true;
+                }
+            });
+
+        }
 
     }
 
@@ -107,100 +105,7 @@ public class LectureStudent extends Activity implements View.OnClickListener{
             case R.id.btnBack:
                 NavUtils.navigateUpFromSameTask(this);
                 break;
-            case R.id.data:
-                showDialog(DIALOG_ID);
-                break;
-            case R.id.commentTeacher:
-                stDate = btnData.getText().toString();
-                Log.d("Name: ", stDate);
-                showDialog(DIALOG_TIME);
-                break;
-            case R.id.btnSave:
-                Toast.makeText(LectureStudent.this, "Сохранено", Toast.LENGTH_SHORT).show();
-                stName = "" + etName.getText();
-                stTeacher = "" + spTeacher.getSelectedItem().toString();
-                stStudent = "" + spStudent.getSelectedItem().toString();
-                stSubject = "" + spSubject.getSelectedItem().toString();
-                stDate = btnData.getText().toString();
-                stTime = btnTime.getText().toString();
-                stTopic = "" + etTopic.getText();
-                stCommentTeacher = "" + etCommentTeacher.getText();
-                stCommentStudent = "" + etCommentStudent.getText();
-                stCheck = "Нет";
-
-                db.addLecture(new LectureData(stName, stTeacher, stStudent, stSubject, stTopic, stDate, stTime, stCommentStudent, stCommentStudent, stCheck));
-                List<LectureData> lectures = db.getAllLecture();
-                for (LectureData cn : lectures) {
-                    String log = "Id: "+cn.getLectureID()+" ,Name: " + cn.getLectureName() + " ,Teacher: " + cn.getLectureTeacher()+" ,Student: " + cn.getLectureStudent()
-                            +" ,Subject: " + cn.getLectureSubject() +" ,Topic: " + cn.getLectureTopic() + " ,Data: " + cn.getLectureData()+" ,Time: " + cn.getLectureTime()
-                            + " ,CommentTeacher: " + cn.getLectureTeacherComment()+" ,CommentStudent: " + cn.getLectureStudentComment();
-                    Log.d("Name: ", log);
-                }
-                break;
-
-            case R.id.send:
-                stName = "" + etName.getText();
-                stTeacher = "" + spTeacher.getSelectedItem().toString();
-                stStudent = "" + spStudent.getSelectedItem().toString();
-                stSubject = "" + spSubject.getSelectedItem().toString();
-                stDate = btnData.getText().toString();
-                stTime = btnTime.getText().toString();
-                stTopic = "" + etTopic.getText();
-                stCommentTeacher = "" + etCommentTeacher.getText();
-                stCommentStudent = "" + etCommentStudent.getText();
-                stCheck = "Нет";
-                stMessege = ("Название: "+stName+"Преподаватель: "+stTeacher+"Студент: "+stStudent+"Предметы: "+stSubject+" Дата: "+stDate+" Время: "+stTime+" Тема:  "+stTopic+" Комментарий: "+stCommentTeacher+" "+stCommentStudent);
-                sendEmail();
-                break;
-
         }
     }
 
-    protected void sendEmail() {
-        Log.i("Send email", "");
-        String[] TO = {""};
-        String[] CC = {""};
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-        emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Напоминание");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, stMessege);
-
-        try {
-            startActivity(Intent.createChooser(emailIntent, "Отправить на почту..."));
-            finish();
-        }
-        catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(LectureStudent.this, "Отправлено", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    @Override
-    protected Dialog onCreateDialog(int id) {
-        if (id == DIALOG_TIME) {
-            TimePickerDialog tpd = new TimePickerDialog(this, myCallBack, myHour, myMinute, true);
-            return tpd;
-        }
-            else if (id == DIALOG_ID) {
-            return new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                    btnData.setText(year + "-" + getResources().getStringArray(R.array.months)[monthOfYear] + "-" +
-                            dayOfMonth );
-                }
-            }, 2016, 6, 22);
-        }
-        return super.onCreateDialog(id);
-    }
-
-    TimePickerDialog.OnTimeSetListener myCallBack = new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-            myHour = hourOfDay;
-            myMinute = minute;
-            btnTime.setText(myHour + ":" + myMinute);
-        }
-    };
 }

@@ -49,40 +49,7 @@ public class ReportStudent extends Activity implements View.OnClickListener {
         arCommentTeacher = new ArrayList<String>();
         arCheck = new ArrayList<String>();
 
-        List<LectureData> lecture = db.getAllLecture();
-        for (LectureData cn : lecture) {
-            String stName = cn.getLectureName();
-            arName.add(stName);
-            String stTeacher = cn.getLectureTeacher();
-            arTeacher.add(stTeacher);
-            String stStudent = cn.getLectureStudent();
-            arStudent.add(stStudent);
-            String stSubject = cn.getLectureSubject();
-            arSubject.add(stSubject);
-            String stTopic = cn.getLectureTopic();
-            arTopic.add(stTopic);
-            String stDate = cn.getLectureData();
-            arDate.add(stDate);
-            String stTime = cn.getLectureTime();
-            arTime.add(stTime);
-            String stCommentStudent = cn.getLectureStudentComment();
-            arCommentStudent.add(stCommentStudent);
-            String stCommentTeacher = cn.getLectureTeacherComment();
-            arCommentTeacher.add(stCommentTeacher);
-            String stCheck = cn.getLectureCheck();
-            arCheck.add(stCheck);
 
-            lv = (ListView) findViewById(R.id.listView);
-            lvAdapter = new ReportListAdapter(this, arName, arTeacher, arStudent, arSubject, arTopic, arDate, arTime, arCommentStudent, arCommentTeacher, arCheck);
-            lv.setAdapter(lvAdapter);
-            lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                @Override
-                public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                    return true;
-                }
-            });
-
-        }
 
     }
 

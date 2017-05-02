@@ -34,18 +34,11 @@ public class Calendar extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_calender1);
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
-        txtTitle.setText("Заметки");
+        txtTitle.setText("Ескертпе");
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);
 
-        List<LectureData> lecture = db.getAllLecture();
-        CalendarCollection.date_collection_arr=new ArrayList<CalendarCollection>();
-        for(LectureData cn : lecture){
-            String s = cn.getLectureData();
-            String ss = cn.getLectureName();
-            CalendarCollection.date_collection_arr.add(new CalendarCollection(s, ss));
-        }
 
         getWidget();
     }

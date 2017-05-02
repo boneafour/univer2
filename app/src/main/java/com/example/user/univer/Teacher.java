@@ -37,16 +37,6 @@ public class Teacher extends Activity implements View.OnClickListener {
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setText(getString(R.string.teacher));
 
-        List<SubjectData> subject = db.getAllSubjects();
-        ArrayList<String> roleList = new ArrayList<String>();
-        roleList.add("Выберите преподавателя:");
-        for(SubjectData cn : subject){
-            String s = cn.getSubjectName();
-            roleList.add(s);
-        }
-        spSubject = (Spinner) findViewById(R.id.subject);
-        ArrayAdapter subjectList = new ArrayAdapter(this,R.layout.activity_spinner, roleList);
-        spSubject.setAdapter(subjectList);
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);
@@ -68,17 +58,16 @@ public class Teacher extends Activity implements View.OnClickListener {
             case R.id.btnSave:
                 stFullName = "" + etFullName.getText();
                 etFullName.setText("");
-                stSubject = "" + spSubject.getSelectedItem().toString();
                 stPhoneNumber = "" + etPhoneNumber.getText();
                 etPhoneNumber.setText("");
                 stCommentTeacher = "" + etCommentTeacher.getText();
                 etCommentTeacher.setText("");
 
                 DatabaseHandler db = new DatabaseHandler(this);
-                db.addTeacher(new TeacherData(stFullName, stSubject, stPhoneNumber, stCommentTeacher));
+                db.addTeacher(new TeacherData(stFullName,  stPhoneNumber, stCommentTeacher));
                 List<TeacherData> teachers = db.getAllTeachers();
                 for (TeacherData cn : teachers) {
-                    String log = "Id: "+cn.getTeacherID()+" ,Name: " + cn.getTeacherName() + " ,Subject: " + cn.getTeacherSubject() + " ,Phone: " + cn.getTeacherPhone()+" ,Comment: " + cn.getTeacherComment();
+                    String log = "Id: "+cn.getTeacherID()+" ,Name: " + cn.getTeacherName() + " ,Phone: " + cn.getTeacherPhone()+" ,Comment: " + cn.getTeacherComment();
                     Log.d("Name: ", log);
                 }
                 break;

@@ -1,27 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/tittle_left"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <TextView
-        android:text="Не заполнено "
-        android:id="@+id/topicName"
+        android:text="Дүниежүзілік шаруашылық жүйесі"
+        android:id="@+id/txtLecture2"
+        android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/subjectName"
+        android:layout_below="@+id/txtLecture1"
+        style="@style/myCustomButton"
+        android:textColor="@android:color/background_light"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="2dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
-    android:text="Не заполнено "
-    android:id="@+id/Lecture"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-        android:layout_below="@+id/topicName"
+        android:id="@+id/txtLecture1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/myCustomButton"
+        android:textColor="@android:color/background_light"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:text="Д.Ж. саяси картасы"
+        android:textSize="18dp"
+        android:layout_below="@+id/app_bar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtLecture3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дүниежүзінің табиғат ресурстары "
+        android:textSize="18dp"
+        style="@style/myCustomButton"
+        android:layout_marginBottom="2dp"
+        android:textColor="@android:color/background_light"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/txtLecture2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtLecture4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дүние жүзі халқының саны"
+        android:textSize="18dp"
+        style="@style/myCustomButton"
+        android:textColor="@android:color/background_light"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/txtLecture3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtLecture5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Материалдық және рухани игіліктер"
+        android:textSize="18dp"
+        style="@style/myCustomButton"
+        android:textColor="@android:color/background_light"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/txtLecture4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtLecture6"
+        style="@style/myCustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtLecture5"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:text="Конспект"
+        android:textColor="@android:color/background_light"
+        android:textSize="18dp" />
 
 
 </RelativeLayout>

@@ -38,8 +38,6 @@ public class GalleryActivity extends Activity implements View.OnClickListener{
             R.drawable.pic5,
             R.drawable.pic6,
             R.drawable.pic7,
-            R.drawable.picfornews1,
-            R.drawable.picfornews2
     };
 
     @Override
@@ -61,32 +59,27 @@ public class GalleryActivity extends Activity implements View.OnClickListener{
             {
 
                 if(position==0){
-                    name.setText("Международный IT Университет");
+                    name.setText("Шарын шатқалы");
                 }
                 else if(position==1){
-                    name.setText("проект «3D Принтер»");
+                    name.setText("Рослен көлі");
                 }
                 else if(position==2){
-                    name.setText("На встрече с компаниями KCELL, Нурсат, Казтелерадио, ТрансТелеком");
+                    name.setText("Қорықтар");
                 }
                 else if(position==3){
-                    name.setText("Студенты МУИТ — чемпионы Казахстана по программированию");
+                    name.setText("Орман");
                 }
                 else if(position==4){
-                    name.setText("Лига IT Университета");
+                    name.setText("Марқакөл");
                 }
                 else if(position==5){
-                    name.setText("Карим Ринат вместе «Вычислительная Техника и Программное обеспечение»");
+                    name.setText("Жем өзені Мұғалжар тауларынан бастау алып, Каспий теңізіне құяды.");
                 }
                 else if(position==6){
-                    name.setText("Представители компании «Huawei Kazakhstan» посетили Международный IT Университет.");
+                    name.setText("Мұнай");
                 }
-                else if(position==7){
-                    name.setText("Встреча с казахстанским космонавтом Айдыном Аимбетовым");
-                }
-                else if(position==8){
-                    name.setText("Ярмарка вакансий");
-                }
+
 
                 // display the images selected
                 ImageView imageView = (ImageView) findViewById(R.id.image1);

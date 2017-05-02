@@ -4,16 +4,14 @@ public class TeacherData {
 
 	int _id;
 	String _name;
-	String _subject;
 	String _phone;
 	String _comment;
 
 	public TeacherData(){
 	}
 
-	public TeacherData(String _name, String _subject, String _phone, String _comment){
+	public TeacherData(String _name,  String _phone, String _comment){
 		this._name = _name;
-		this._subject = _subject;
 		this._phone = _phone;
 		this._comment = _comment;
 	}
@@ -32,12 +30,6 @@ public class TeacherData {
 		this._name = _name;
 	}
 
-	public String getTeacherSubject(){
-		return this._subject;
-	}
-	public void setTeacherSubject(String _subject){
-		this._subject = _subject;
-	}
 
 	public String getTeacherPhone(){
 		return this._phone;

@@ -26,7 +26,7 @@ public class MarkForStudent extends Activity implements View.OnClickListener{
     ListView lv;
     MarkListAdapter lvAdapter;
     DatabaseHandler db = new DatabaseHandler(this);
-    ArrayList<String> arTeacher, arStudent, arSubject, arName, arMark;
+    ArrayList<String> arName, arMark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,32 +34,24 @@ public class MarkForStudent extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_mark_for_student);
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
-        txtTitle.setText("Оценки");
+        txtTitle.setText("Баға");
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);
 
-        arTeacher = new ArrayList<String>();
-        arStudent = new ArrayList<String>();
-        arSubject = new ArrayList<String>();
         arName = new ArrayList<String>();
         arMark = new ArrayList<String>();
 
         List<MarkData> mark = db.getAllMarks();
         for (MarkData cn : mark) {
-            String stName = cn.getMarkTeacher();
-            arTeacher.add(stName);
-            String stTeacher = cn.getMarkStudent();
-            arStudent.add(stTeacher);
-            String stStudent = cn.getMarkSubject();
-            arSubject.add(stStudent);
+
             String stSubject = cn.getMarkName();
             arName.add(stSubject);
             String stTopic = cn.getMark();
             arMark.add(stTopic);
         }
             lv = (ListView) findViewById(R.id.listView);
-            lvAdapter = new MarkListAdapter(this, arTeacher, arStudent, arSubject, arName, arMark);
+            lvAdapter = new MarkListAdapter(this,  arName, arMark);
             lv.setAdapter(lvAdapter);
             lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override

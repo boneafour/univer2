@@ -79,7 +79,7 @@ public class ReportListAdapter extends BaseAdapter implements View.OnClickListen
             holder.tvTeacher = (TextView) convertView.findViewById(R.id.teacherName);
             holder.tvStudent = (TextView) convertView.findViewById(R.id.name);
             holder.tvSubject = (TextView) convertView.findViewById(R.id.subjectName);
-            holder.tvTopic = (TextView) convertView.findViewById(R.id.topicName);
+            holder.tvTopic = (TextView) convertView.findViewById(R.id.txtLecture2);
             holder.tvDate = (TextView) convertView.findViewById(R.id.date);
             holder.tvTime = (TextView) convertView.findViewById(R.id.lectureTime);
             holder.tvCommentTeacher = (TextView) convertView.findViewById(R.id.commentTeacher);

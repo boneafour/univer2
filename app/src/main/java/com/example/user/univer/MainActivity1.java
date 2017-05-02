@@ -29,30 +29,25 @@ public class MainActivity1 extends Activity {
                     startActivity(new Intent(MainActivity1.this, LectureStudent.class));
                     }
                 else if (position==1){
-                    startActivity(new Intent(MainActivity1.this, ReportStudent.class));
+                    startActivity(new Intent(MainActivity1.this, Report.class));
                 }
                 else if(position==2){
-                    startActivity(new Intent(MainActivity1.this, CalendarStudent.class));
-                }
-                else if(position==3){
                     startActivity(new Intent(MainActivity1.this, MarkForStudent.class));
                 }
-                else if(position==4){
+                else if(position==3){
                 //    startActivity(new Intent(MainActivity1.this, Teacher.class));
                 }
-                else if (position==5){
+                else if (position==4){
                     startActivity(new Intent(MainActivity1.this, Student.class));
                 }
-                else if(position==6){
-                //    startActivity(new Intent(MainActivity1.this, Subject.class));
-                }
-                else if(position==7){
+
+                else if(position==5){
                     startActivity(new Intent(MainActivity1.this, NewsStudent.class));
                 }
-                else if(position==8){
+                else if(position==6){
                     startActivity(new Intent(MainActivity1.this, GalleryActivityStudent.class));
                 }
-                else if(position==9){
+                else if(position==7){
                     startActivity(new Intent(MainActivity1.this, AboutUsStudent.class));
                 }
               }

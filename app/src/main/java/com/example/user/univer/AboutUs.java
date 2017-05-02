@@ -26,7 +26,7 @@ public class AboutUs extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_about_us);
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
-        txtTitle.setText("О нас");
+        txtTitle.setText("Біз туралы");
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);

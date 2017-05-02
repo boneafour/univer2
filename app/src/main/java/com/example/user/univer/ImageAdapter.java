@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
-    private String[] main = { "Лекция","Отчет","Заметки","Оценки", "Предподаватель", "Школьник","Предметы","Новости","Галерея", "О нас" };
+    private String[] main = { "Лекция","Бақылау","Баға", "Мұғәлім", "Оқушы", "Жаңалықтар", "Галерея", "Біз туралы" };
     public ImageAdapter(Context c) {
         mContext = c;
     }
@@ -49,7 +49,7 @@ public class ImageAdapter extends BaseAdapter {
 
     }
     private Integer[] mThumbIds = {
-            R.drawable.lecture, R.drawable.otchet, R.drawable.calendar1, R.drawable.mark1, R.drawable.teacher2, R.drawable.student2, R.drawable.subject1, R.drawable.news1, R.drawable.gallery,  R.drawable.about_us1,
+            R.drawable.lecture, R.drawable.otchet, R.drawable.mark1, R.drawable.teacher2, R.drawable.student2,  R.drawable.news1, R.drawable.gallery,  R.drawable.about_us1,
 
     };
 }

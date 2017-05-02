@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by user on 14.06.2016.
  */
-public class Subject extends Activity implements View.OnClickListener{
+public class Subject extends Activity{
 
     private TextView txtTitle;
     private ImageButton btnBack;
@@ -29,7 +29,7 @@ public class Subject extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject);
 
-        txtTitle = (TextView) findViewById(R.id.txtTitle);
+       /* txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setText(getString(R.string.subject));
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
@@ -66,7 +66,7 @@ public class Subject extends Activity implements View.OnClickListener{
                 Log.d("Name: ", log);
             }
             break;
+/*/
+    }
     }
 
-    }
-}

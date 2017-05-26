@@ -4,13 +4,15 @@ public class MarkData {
 
 	int _id;
 	String _name;
+	String _nameStudent;
 	String _mark;
 
 	public MarkData(){
 	}
 
-	public MarkData(String _name, String _mark){
+	public MarkData(String _name, String _nameStudent, String _mark){
 		this._name = _name;
+		this._nameStudent = _nameStudent;
 		this._mark = _mark;
 	}
 
@@ -28,6 +30,13 @@ public class MarkData {
 	}
 	public void setMarkName(String _name){
 		this._name = _name;
+	}
+
+	public String getMarkStudent(){
+		return this._nameStudent;
+	}
+	public void setMarkStudent(String _nameStudent){
+		this._name = _nameStudent;
 	}
 
 	public String getMark(){

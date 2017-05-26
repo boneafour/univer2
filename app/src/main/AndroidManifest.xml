@@ -27,6 +27,11 @@
         </activity>
 
         <activity
+            android:name="MainActivity2"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
             android:name=".Lecture"
             android:screenOrientation="portrait">
             <meta-data
@@ -76,6 +81,34 @@
                 android:value=".Lecture" />
         </activity>
         <activity
+            android:name=".TxtLecture.TxtLecture7"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Lecture" />
+        </activity>
+        <activity
+            android:name=".TxtLecture.TxtLecture8"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Lecture" />
+        </activity>
+        <activity
+            android:name=".TxtLecture.TxtLecture9"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Lecture" />
+        </activity>
+        <activity
+            android:name=".TxtLecture.TxtLecture10"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Lecture" />
+        </activity>
+        <activity
             android:name=".TxtLecture.TxtLecture11"
             android:screenOrientation="portrait">
             <meta-data
@@ -118,12 +151,47 @@
                 android:value=".LectureStudent" />
         </activity>
         <activity
+            android:name=".TxtLecture.TxtLecture77"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LectureStudent" />
+        </activity>
+        <activity
+            android:name=".TxtLecture.TxtLecture88"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LectureStudent" />
+        </activity>
+        <activity
+            android:name=".TxtLecture.TxtLecture99"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LectureStudent" />
+        </activity>
+        <activity
+            android:name=".TxtLecture.TxtLecture1010"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LectureStudent" />
+        </activity>
+        <activity
             android:name=".Report"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MainActivity1" />
         </activity>
+        <activity
+        android:name=".ReportStudent"
+        android:screenOrientation="portrait">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity1" />
+    </activity>
         <activity
             android:name=".Test.Test1"
             android:screenOrientation="portrait">
@@ -166,20 +234,48 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Report" />
         </activity>
+        <activity
+            android:name=".Test.Test7"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Report" />
+        </activity>
+        <activity
+            android:name=".Test.Test8"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Report" />
+        </activity>
+        <activity
+            android:name=".Test.Test9"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Report" />
+        </activity>
+        <activity
+            android:name=".Test.Test10"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Report" />
+        </activity>
 
         <activity
             android:name=".Teacher"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MainActivity2" />
         </activity>
         <activity
             android:name=".Student"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity1" />
+                android:value=".MainActivity2" />
         </activity>
         <activity
             android:name=".Subject"
@@ -219,6 +315,13 @@
         </activity>
         <activity
             android:name=".GalleryActivityStudent"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity1" />
+        </activity>
+        <activity
+            android:name=".Profile"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

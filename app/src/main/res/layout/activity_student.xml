@@ -46,7 +46,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="@string/phoneNumber"
+        android:hint="Құпия сөзді енгізіңіз:"
         style="@style/myCustomEditText"
         android:inputType="number"
         android:ems="10"

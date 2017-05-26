@@ -109,6 +109,66 @@
             android:text="Бақылау 6-шы лекциядан"
             android:textAlignment="viewStart"
             android:textSize="16dp"></Button>
+        <Button
+            android:id="@+id/test7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/studentName"
+            style="@style/myCustomButton"
+            android:textColor="@android:color/background_light"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:text="Бақылау 7-шi лекциядан"
+            android:textAlignment="viewStart"
+            android:textSize="16dp"></Button>
+        <Button
+            android:id="@+id/test8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/studentName"
+            style="@style/myCustomButton"
+            android:textColor="@android:color/background_light"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:text="Бақылау 8-шi лекциядан"
+            android:textAlignment="viewStart"
+            android:textSize="16dp"></Button>
+        <Button
+            android:id="@+id/test9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/studentName"
+            style="@style/myCustomButton"
+            android:textColor="@android:color/background_light"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:text="Бақылау 9-шы лекциядан"
+            android:textAlignment="viewStart"
+            android:textSize="16dp"></Button>
+        <Button
+            android:id="@+id/test10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/studentName"
+            style="@style/myCustomButton"
+            android:textColor="@android:color/background_light"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:text="Бақылау 10-шы лекциядан"
+            android:textAlignment="viewStart"
+            android:textSize="16dp"></Button>
 
     </LinearLayout>
 

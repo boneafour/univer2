@@ -26,7 +26,7 @@ public class MarkForStudent extends Activity implements View.OnClickListener{
     ListView lv;
     MarkListAdapter lvAdapter;
     DatabaseHandler db = new DatabaseHandler(this);
-    ArrayList<String> arName, arMark;
+    ArrayList<String> arName, arMark, arStudent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class MarkForStudent extends Activity implements View.OnClickListener{
         btnBack.setOnClickListener(this);
 
         arName = new ArrayList<String>();
+        arStudent = new ArrayList<String>();
         arMark = new ArrayList<String>();
 
         List<MarkData> mark = db.getAllMarks();
@@ -47,11 +48,13 @@ public class MarkForStudent extends Activity implements View.OnClickListener{
 
             String stSubject = cn.getMarkName();
             arName.add(stSubject);
+            String stName = cn.getMarkStudent();
+            arStudent.add(stName);
             String stTopic = cn.getMark();
             arMark.add(stTopic);
         }
             lv = (ListView) findViewById(R.id.listView);
-            lvAdapter = new MarkListAdapter(this,  arName, arMark);
+            lvAdapter = new MarkListAdapter(this,  arName, arStudent, arMark);
             lv.setAdapter(lvAdapter);
             lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override

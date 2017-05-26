@@ -28,26 +28,17 @@ public class MainActivity extends Activity {
               if(position==0){
                     startActivity(new Intent(MainActivity.this, Lecture.class));
                     }
-                else if (position==1){
-                  //    startActivity(new Intent(MainActivity.this, Report.class));
-                }
-                else if(position==2){
+                else if(position==1){
                     startActivity(new Intent(MainActivity.this, MarkForTeacher.class));
                 }
-                else if(position==3){
-                    startActivity(new Intent(MainActivity.this, Teacher.class));
-                }
-                else if (position==4){
-                //    startActivity(new Intent(MainActivity.this, Student.class));
-                }
 
-                else if(position==5){
+                else if(position==2){
                     startActivity(new Intent(MainActivity.this, News.class));
                 }
-                else if(position==6){
+                else if(position==3){
                     startActivity(new Intent(MainActivity.this, GalleryActivity.class));
                 }
-                else if(position==7){
+                else if(position==4){
                     startActivity(new Intent(MainActivity.this, AboutUs.class));
                 }
               }

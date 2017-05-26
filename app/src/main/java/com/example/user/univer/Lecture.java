@@ -9,22 +9,26 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.univer.TxtLecture.TxtLecture1;
+import com.example.user.univer.TxtLecture.TxtLecture10;
 import com.example.user.univer.TxtLecture.TxtLecture2;
 import com.example.user.univer.TxtLecture.TxtLecture3;
 import com.example.user.univer.TxtLecture.TxtLecture4;
 import com.example.user.univer.TxtLecture.TxtLecture5;
 import com.example.user.univer.TxtLecture.TxtLecture6;
+import com.example.user.univer.TxtLecture.TxtLecture7;
+import com.example.user.univer.TxtLecture.TxtLecture8;
+import com.example.user.univer.TxtLecture.TxtLecture9;
 
 public class Lecture extends Activity implements View.OnClickListener {
 
     private ImageButton btnBack;
-    private TextView txtTitle, txtLecture6, txtLecture5, txtLecture4, txtLecture3, txtLecture2, txtLecture1;
+    private TextView txtTitle, txtLecture10, txtLecture9, txtLecture8, txtLecture7, txtLecture6, txtLecture5, txtLecture4, txtLecture3, txtLecture2, txtLecture1;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lecture);
+        setContentView(R.layout.activity_table_list1);
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setText(getString(R.string.lecture));
 
@@ -51,6 +55,26 @@ public class Lecture extends Activity implements View.OnClickListener {
         txtLecture6 = (TextView) findViewById(R.id.txtLecture6);
         txtLecture6.setText("Конспект");
         txtLecture6.setOnClickListener(this);
+
+
+        txtLecture7 = (TextView) findViewById(R.id.txtLecture7);
+        txtLecture7.setText("Аустралия материгі");
+        txtLecture7.setOnClickListener(this);
+
+
+        txtLecture8 = (TextView) findViewById(R.id.txtLecture8);
+        txtLecture8.setText("ТМД елдеріне жалпы шолу");
+        txtLecture8.setOnClickListener(this);
+
+
+        txtLecture9 = (TextView) findViewById(R.id.txtLecture9);
+        txtLecture9.setText("Литосфера, жер бедері");
+        txtLecture9.setOnClickListener(this);
+
+
+        txtLecture10 = (TextView) findViewById(R.id.txtLecture10);
+        txtLecture10.setText("Атмосфера және климат");
+        txtLecture10.setOnClickListener(this);
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);
@@ -80,6 +104,22 @@ public class Lecture extends Activity implements View.OnClickListener {
                 break;
             case R.id.txtLecture6:
                 startActivity(new Intent(Lecture.this, TxtLecture6.class));
+                break;
+
+            case R.id.txtLecture7:
+                startActivity(new Intent(Lecture.this, TxtLecture7.class));
+                break;
+
+            case R.id.txtLecture8:
+                startActivity(new Intent(Lecture.this, TxtLecture8.class));
+                break;
+
+            case R.id.txtLecture9:
+                startActivity(new Intent(Lecture.this, TxtLecture9.class));
+                break;
+
+            case R.id.txtLecture10:
+                startActivity(new Intent(Lecture.this, TxtLecture10.class));
                 break;
 
 

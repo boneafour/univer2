@@ -4,10 +4,7 @@
     android:layout_height="match_parent">
     <include
         android:id="@+id/app_bar"
-        layout="@layout/tittle_left"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        layout="@layout/tittle_left"/>
     <TextView
         android:text="Дүниежүзілік шаруашылық жүйесі"
         android:id="@+id/txtLecture2"
@@ -35,6 +32,8 @@
         android:paddingLeft="15dp"
         android:text="Д.Ж. саяси картасы"
         android:textSize="18dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_below="@+id/app_bar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -100,6 +99,66 @@
         android:paddingTop="10dp"
         android:paddingLeft="15dp"
         android:text="Конспект"
+        android:textColor="@android:color/background_light"
+        android:textSize="18dp" />
+    <TextView
+        android:id="@+id/txtLecture7"
+        style="@style/myCustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtLecture6"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:text="Аустралия материгі"
+        android:textColor="@android:color/background_light"
+        android:textSize="18dp" />
+    <TextView
+        android:id="@+id/txtLecture8"
+        style="@style/myCustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtLecture7"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:text="ТМД елдеріне жалпы шолу"
+        android:textColor="@android:color/background_light"
+        android:textSize="18dp" />
+    <TextView
+        android:id="@+id/txtLecture9"
+        style="@style/myCustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtLecture8"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:text="Литосфера, жер бедері"
+        android:textColor="@android:color/background_light"
+        android:textSize="18dp" />
+    <TextView
+        android:id="@+id/txtLecture10"
+        style="@style/myCustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtLecture9"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:text="Атмосфера және климат"
         android:textColor="@android:color/background_light"
         android:textSize="18dp" />
 

@@ -28,6 +28,8 @@ public class Test1 extends Activity implements View.OnClickListener {
     private int count = 0, correct = 0;
     private String incorrect = "";
 
+    String sName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,9 @@ public class Test1 extends Activity implements View.OnClickListener {
 
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         txtTitle.setText(getString(R.string.report));
+
+        Intent intent = getIntent();
+        sName = intent.getStringExtra("sName");
 
         question = (TextView) findViewById(R.id.question);
 
@@ -256,13 +261,16 @@ public class Test1 extends Activity implements View.OnClickListener {
                 testNumber.setText("");
 
                     String correct1 = "" + correct;
-                    String name = "Лекция 1";
+                    String lecture = "Лекция 1";
+                    String nameStudent = sName;
+
+                    System.out.println(correct1+lecture+nameStudent);
 
                     DatabaseHandler db = new DatabaseHandler(this);
-                    db.addMark(new MarkData(name, correct1));
+                    db.addMark(new MarkData(lecture, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
                     for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkName() + " ,Mark: " + cn.getMark();
+                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkName() + " ,NameStudent: "+ cn.getMarkStudent() + " ,Mark: " + cn.getMark();
                         Log.d("Name: ", log);
                     }
             }
@@ -526,12 +534,13 @@ public class Test1 extends Activity implements View.OnClickListener {
 
                     String correct1 = "" + correct;
                     String name = "Лекция 1";
+                    String nameStudent = sName;
 
                     DatabaseHandler db = new DatabaseHandler(this);
-                    db.addMark(new MarkData(name, correct1));
+                    db.addMark(new MarkData(name, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
                     for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkName() + " ,Mark: " + cn.getMark();
+                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkStudent() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMark();
                         Log.d("Name: ", log);
                     }
 
@@ -797,12 +806,13 @@ public class Test1 extends Activity implements View.OnClickListener {
 
                     String correct1 = "" + correct;
                     String name = "Лекция 1";
+                    String nameStudent = sName;
 
                     DatabaseHandler db = new DatabaseHandler(this);
-                    db.addMark(new MarkData(name, correct1));
+                    db.addMark(new MarkData(name, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
                     for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkName() + " ,Mark: " + cn.getMark();
+                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkStudent() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMark();
                         Log.d("Name: ", log);
                     }
                 }
@@ -1066,12 +1076,13 @@ public class Test1 extends Activity implements View.OnClickListener {
 
                     String correct1 = "" + correct;
                     String name = "Лекция 1";
+                    String nameStudent = sName;
 
                     DatabaseHandler db = new DatabaseHandler(this);
-                    db.addMark(new MarkData(name, correct1));
+                    db.addMark(new MarkData(name, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
                     for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkName() + " ,Mark: " + cn.getMark();
+                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkStudent() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMark();
                         Log.d("Name: ", log);
                     }
                 }
@@ -1335,12 +1346,13 @@ public class Test1 extends Activity implements View.OnClickListener {
 
                     String correct1 = "" + correct;
                     String name = "Лекция 1";
+                    String nameStudent = sName;
 
                     DatabaseHandler db = new DatabaseHandler(this);
-                    db.addMark(new MarkData(name, correct1));
+                    db.addMark(new MarkData(name, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
                     for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkName() + " ,Mark: " + cn.getMark();
+                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkStudent() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMark();
                         Log.d("Name: ", log);
                     }
                 }

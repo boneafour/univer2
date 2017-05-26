@@ -13,7 +13,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	// All Static variables
 	// Database Version
-	private static final int DATABASE_VERSION = 8;
+	private static final int DATABASE_VERSION = 9;
 
 	// Database Name
 	private static final String DATABASE_NAME = "contactsManager";
@@ -37,6 +37,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	private static final String MARK_ID = "mark_id";
 	private static final String MARK_NAME = "mark_name";
+	private static final String MARK_STUDENT = "mark_name_student";
 	private static final String MARK_MARKS = "mark_marks";
 
 
@@ -60,7 +61,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 		String CREATE_TABLE_MARK = "CREATE TABLE " + TABLE_MARK + "("
 				+ MARK_ID + " INTEGER PRIMARY KEY,"
-				+ MARK_NAME + " TEXT,"+ MARK_MARKS + " TEXT"+  ")";
+				+ MARK_NAME + " TEXT," + MARK_STUDENT + " TEXT,"+ MARK_MARKS + " TEXT"+  ")";
 		db.execSQL(CREATE_TABLE_MARK);
 
 	}
@@ -104,6 +105,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 		ContentValues values = new ContentValues();
 		values.put(MARK_NAME, mark.getMarkName());
+		values.put(MARK_STUDENT, mark.getMarkStudent());
 		values.put(MARK_MARKS, mark.getMark());
 		db.insert(TABLE_MARK, null, values);
 		db.close();
@@ -170,7 +172,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				MarkData mark = new MarkData();
 				mark.setMarkID(Integer.parseInt(cursor.getString(0)));
 				mark.setMarkName(cursor.getString(1));
-				mark.setMark(cursor.getString(2));
+				mark.setMarkStudent(cursor.getString(2));
+				mark.setMark(cursor.getString(3));
 				markList.add(mark);
 			} while (cursor.moveToNext());
 		}

@@ -13,7 +13,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	// All Static variables
 	// Database Version
-	private static final int DATABASE_VERSION = 9;
+	private static final int DATABASE_VERSION = 10;
 
 	// Database Name
 	private static final String DATABASE_NAME = "contactsManager";
@@ -21,7 +21,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	// Contacts table name
 	private static final String TABLE_TEACHERS = "teachers";
 	private static final String TABLE_STUDENTS = "students";
-	private static final String TABLE_MARK = "mark";
+	private static final String TABLE_MARKS = "marks";
 	// Contacts Table Columns names
 
 	private static final String TEACHER_ID = "teacher_id";
@@ -35,10 +35,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	private static final String STUDENT_COMMENT = "student_comment";
 
 
-	private static final String MARK_ID = "mark_id";
-	private static final String MARK_NAME = "mark_name";
-	private static final String MARK_STUDENT = "mark_name_student";
-	private static final String MARK_MARKS = "mark_marks";
+	private static final String MARKS_ID = "marks_id";
+	private static final String MARKS_LECTURE= "marks_lecture";
+	private static final String MARKS_NAME = "marks_name";
+	private static final String MARKS_MARK= "marks_mark";
+
 
 
 	public DatabaseHandler(Context context) {
@@ -59,9 +60,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		db.execSQL(CREATE_TABLE_STUDENTS);
 
 
-		String CREATE_TABLE_MARK = "CREATE TABLE " + TABLE_MARK + "("
-				+ MARK_ID + " INTEGER PRIMARY KEY,"
-				+ MARK_NAME + " TEXT," + MARK_STUDENT + " TEXT,"+ MARK_MARKS + " TEXT"+  ")";
+		String CREATE_TABLE_MARK = "CREATE TABLE " + TABLE_MARKS + "("
+				+ MARKS_ID + " INTEGER PRIMARY KEY,"
+				+ MARKS_LECTURE + " TEXT," + MARKS_NAME + " TEXT,"+ MARKS_MARK + " TEXT"+  ")";
 		db.execSQL(CREATE_TABLE_MARK);
 
 	}
@@ -72,7 +73,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		// Drop older table if existed
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_TEACHERS);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_STUDENTS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_MARK);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_MARKS);
 		onCreate(db);
 	}
 
@@ -104,10 +105,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
-		values.put(MARK_NAME, mark.getMarkName());
-		values.put(MARK_STUDENT, mark.getMarkStudent());
-		values.put(MARK_MARKS, mark.getMark());
-		db.insert(TABLE_MARK, null, values);
+		values.put(MARKS_LECTURE, mark.getMarkLecture());
+		values.put(MARKS_NAME, mark.getMarkName());
+		values.put(MARKS_MARK, mark.getMarks());
+		db.insert(TABLE_MARKS, null, values);
 		db.close();
 	}
 
@@ -162,7 +163,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	public List<MarkData> getAllMarks() {
 		List<MarkData> markList = new ArrayList<MarkData>();
 		// Select All Query
-		String selectQuery = "SELECT  * FROM " + TABLE_MARK;
+		String selectQuery = "SELECT  * FROM " + TABLE_MARKS;
 
 		SQLiteDatabase db = this.getWritableDatabase();
 		Cursor cursor = db.rawQuery(selectQuery, null);
@@ -171,9 +172,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			do {
 				MarkData mark = new MarkData();
 				mark.setMarkID(Integer.parseInt(cursor.getString(0)));
-				mark.setMarkName(cursor.getString(1));
-				mark.setMarkStudent(cursor.getString(2));
-				mark.setMark(cursor.getString(3));
+				mark.setMarkLecture(cursor.getString(1));
+				mark.setMarkName(cursor.getString(2));
+				mark.setMarks(cursor.getString(3));
 				markList.add(mark);
 			} while (cursor.moveToNext());
 		}

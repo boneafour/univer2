@@ -43,11 +43,11 @@ public class MarkForTeacher extends Activity implements View.OnClickListener{
         List<MarkData> mark = db.getAllMarks();
         for (MarkData cn : mark) {
 
-            String stSubject = cn.getMarkName();
+            String stSubject = cn.getMarkLecture();
             arName.add(stSubject);
-            String stName = cn.getMarkStudent();
+            String stName = cn.getMarkName();
             arStudent.add(stName);
-            String stTopic = cn.getMark();
+            String stTopic = cn.getMarks();
             arMark.add(stTopic);
         }
         lv = (ListView) findViewById(R.id.listView);

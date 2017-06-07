@@ -41,6 +41,7 @@ public class Report extends Activity implements View.OnClickListener {
 
         Intent intent = getIntent();
         sName = intent.getStringExtra("sName");
+        System.out.println(sName+" --------- "+sName);
 
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(this);

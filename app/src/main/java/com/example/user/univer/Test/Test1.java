@@ -269,10 +269,6 @@ public class Test1 extends Activity implements View.OnClickListener {
                     DatabaseHandler db = new DatabaseHandler(this);
                     db.addMark(new MarkData(lecture, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
-                    for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkName() + " ,NameStudent: "+ cn.getMarkStudent() + " ,Mark: " + cn.getMark();
-                        Log.d("Name: ", log);
-                    }
             }
                 if(count==0){
                     incorrect = (incorrect+" 1");
@@ -539,10 +535,6 @@ public class Test1 extends Activity implements View.OnClickListener {
                     DatabaseHandler db = new DatabaseHandler(this);
                     db.addMark(new MarkData(name, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
-                    for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkStudent() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMark();
-                        Log.d("Name: ", log);
-                    }
 
 
                 }
@@ -811,10 +803,6 @@ public class Test1 extends Activity implements View.OnClickListener {
                     DatabaseHandler db = new DatabaseHandler(this);
                     db.addMark(new MarkData(name, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
-                    for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkStudent() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMark();
-                        Log.d("Name: ", log);
-                    }
                 }
                 if(count==0){
                     incorrect = (incorrect+" 1");
@@ -1081,10 +1069,6 @@ public class Test1 extends Activity implements View.OnClickListener {
                     DatabaseHandler db = new DatabaseHandler(this);
                     db.addMark(new MarkData(name, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
-                    for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkStudent() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMark();
-                        Log.d("Name: ", log);
-                    }
                 }
                 if(count==0){
                     incorrect = (incorrect+" 1");
@@ -1352,7 +1336,7 @@ public class Test1 extends Activity implements View.OnClickListener {
                     db.addMark(new MarkData(name, nameStudent, correct1));
                     List<MarkData> markDatas = db.getAllMarks();
                     for (MarkData cn : markDatas) {
-                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkStudent() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMark();
+                        String log = "Id: "+cn.getMarkID()+" ,Name: " + cn.getMarkLecture() + " ,NameStudent: "+ cn.getMarkName() + " ,Mark: " + cn.getMarks();
                         Log.d("Name: ", log);
                     }
                 }

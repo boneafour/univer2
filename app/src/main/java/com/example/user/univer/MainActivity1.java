@@ -25,6 +25,8 @@ public class MainActivity1 extends Activity {
         sName = intent.getStringExtra("sName");
         sPass = intent.getStringExtra("sPass");
 
+        System.out.println(sName+" --------- "+sPass);
+
         GridView gridview = (GridView) findViewById(R.id.grid);
         gridview.setAdapter(new ImageAdapter1(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {

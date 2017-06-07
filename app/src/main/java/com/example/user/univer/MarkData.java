@@ -3,17 +3,17 @@ package com.example.user.univer;
 public class MarkData {
 
 	int _id;
+	String _lecture;
 	String _name;
-	String _nameStudent;
-	String _mark;
+	String _marks;
 
 	public MarkData(){
 	}
 
-	public MarkData(String _name, String _nameStudent, String _mark){
+	public MarkData(String _lecture, String _name, String _marks){
+		this._lecture = _lecture;
 		this._name = _name;
-		this._nameStudent = _nameStudent;
-		this._mark = _mark;
+		this._marks = _marks;
 	}
 
 	public int getMarkID(){
@@ -25,6 +25,13 @@ public class MarkData {
 
 
 
+	public String getMarkLecture(){
+		return this._lecture;
+	}
+	public void setMarkLecture(String _lecture){
+		this._lecture = _lecture;
+	}
+
 	public String getMarkName(){
 		return this._name;
 	}
@@ -32,18 +39,11 @@ public class MarkData {
 		this._name = _name;
 	}
 
-	public String getMarkStudent(){
-		return this._nameStudent;
+	public String getMarks(){
+		return this._marks;
 	}
-	public void setMarkStudent(String _nameStudent){
-		this._name = _nameStudent;
-	}
-
-	public String getMark(){
-		return this._mark;
-	}
-	public void setMark(String _mark){
-		this._mark = _mark;
+	public void setMarks(String _marks){
+		this._marks = _marks;
 	}
 
 
